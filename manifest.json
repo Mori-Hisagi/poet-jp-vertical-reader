@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "poet.jp 縦書きリーダー",
+  "version": "1.0.0",
+  "description": "poet.jpの画像を元の表示幅で表示し、その下の詩だけを縦書きにするリーダーです。",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://poet.jp/photo/*",
+        "https://www.poet.jp/photo/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
